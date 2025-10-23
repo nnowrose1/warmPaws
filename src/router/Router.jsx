@@ -7,6 +7,9 @@ import Home from "../pages/Home";
 import Services from "../pages/Services";
 import MyProfile from "../pages/MyProfile";
 import Error from "../components/Error";
+import ServiceDetails from "../pages/ServiceDetails";
+import Loader from "../components/Loader";
+import PrivateRoutes from "./PrivateRoutes";
 
 export const router = createBrowserRouter([
     {
@@ -15,11 +18,23 @@ export const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <Home></Home>
+                loader: () => fetch('/petCare.json'),
+                element: <Home></Home>,
+                hydrateFallbackElement: <Loader></Loader>
             },
             {
                 path: '/services',
-                element: <Services></Services>
+                loader: () => fetch('/petCare.json'),
+                element: <Services></Services>,
+                hydrateFallbackElement: <Loader></Loader>
+            },
+            {
+             path: '/services/:id',
+             loader: () => fetch('/petCare.json'),
+             element: <PrivateRoutes>
+                <ServiceDetails></ServiceDetails>
+             </PrivateRoutes>,
+             hydrateFallbackElement: <Loader></Loader>
             },
             {
                 path: '/profile',

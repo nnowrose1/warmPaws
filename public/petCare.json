@@ -1,0 +1,110 @@
+[
+  {
+    "serviceId": 1,
+    "serviceName": "Winter Coat Fitting for Dogs",
+    "providerName": "PawCare Studio",
+    "providerEmail": "info@pawcare.com",
+    "price": 25,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Custom coat fitting and warm outfit options to keep your dog comfortable in the cold.",
+    "image": "https://i.postimg.cc/3R0n1gZr/winter-coat-dog.jpg",
+    "category": "Clothing"
+  },
+  {
+    "serviceId": 2,
+    "serviceName": "Heated Pet Bed Rental",
+    "providerName": "WarmNest Pets",
+    "providerEmail": "support@warmnest.com",
+    "price": 15,
+    "rating": 4.7,
+    "slotsAvailable": 6,
+    "description": "Cozy heated beds for both cats and dogs to ensure warmth and comfort during chilly nights.",
+    "image": "https://i.postimg.cc/Mp4wH4tR/heated-pet-bed.jpg",
+    "category": "Comfort"
+  },
+  {
+    "serviceId": 3,
+    "serviceName": "Paw Moisturizing & Protection",
+    "providerName": "PawGlow Clinic",
+    "providerEmail": "contact@pawglow.com",
+    "price": 18,
+    "rating": 4.8,
+    "slotsAvailable": 5,
+    "description": "Special moisturizing treatment to prevent dry or cracked paws during winter walks.",
+    "image": "https://i.postimg.cc/6Q5tK5nH/paw-moisturizing.jpg",
+    "category": "Grooming"
+  },
+  {
+    "serviceId": 4,
+    "serviceName": "Winter Grooming & De-shedding",
+    "providerName": "FluffyTails Spa",
+    "providerEmail": "hello@fluffytails.com",
+    "price": 30,
+    "rating": 5.0,
+    "slotsAvailable": 3,
+    "description": "Professional winter grooming session including de-shedding and moisturizing shampoo for thick coats.",
+    "image": "https://i.postimg.cc/hGmTHxTP/winter-grooming.jpg",
+    "category": "Grooming"
+  },
+  {
+    "serviceId": 5,
+    "serviceName": "Pet Winter Nutrition Consultation",
+    "providerName": "HealthyPaws Vet Care",
+    "providerEmail": "nutrition@healthypaws.com",
+    "price": 20,
+    "rating": 4.6,
+    "slotsAvailable": 8,
+    "description": "Expert guidance on nutrition and supplements to keep your pet’s immune system strong in winter.",
+    "image": "https://i.postimg.cc/63k4PNQm/pet-nutrition.jpg",
+    "category": "Nutrition"
+  },
+  {
+    "serviceId": 6,
+    "serviceName": "Thermal Blanket Service for Cats",
+    "providerName": "MeowHaven Supplies",
+    "providerEmail": "service@meowhaven.com",
+    "price": 12,
+    "rating": 4.5,
+    "slotsAvailable": 10,
+    "description": "Soft, machine-washable thermal blankets perfect for keeping cats cozy and calm during cold months.",
+    "image": "https://i.postimg.cc/xC1d2kLZ/cat-blanket.jpg",
+    "category": "Comfort"
+  },
+  {
+    "serviceId": 7,
+    "serviceName": "Winter Paw Booties Fitting",
+    "providerName": "PawFit Boutique",
+    "providerEmail": "fit@pawfit.com",
+    "price": 22,
+    "rating": 4.9,
+    "slotsAvailable": 6,
+    "description": "Durable waterproof booties fitting service to protect your pet’s paws from snow and ice.",
+    "image": "https://i.postimg.cc/GpDfcnMB/paw-booties.jpg",
+    "category": "Clothing"
+  },
+  {
+    "serviceId": 8,
+    "serviceName": "Pet Sauna & Warm Bath Therapy",
+    "providerName": "ChillAway Pet Spa",
+    "providerEmail": "relax@chillaway.com",
+    "price": 35,
+    "rating": 5.0,
+    "slotsAvailable": 2,
+    "description": "Relaxing warm bath followed by mild sauna therapy to soothe stiff joints and muscles during winter.",
+    "image": "https://i.postimg.cc/Y0W0VvYr/pet-sauna.jpg",
+    "category": "Wellness"
+  },
+  {
+    "serviceId": 9,
+    "serviceName": "Winter Walking Assistance Service",
+    "providerName": "FrostySteps",
+    "providerEmail": "info@frostysteps.com",
+    "price": 28,
+    "rating": 4.7,
+    "slotsAvailable": 5,
+    "description": "Trained pet walkers equipped for cold weather to ensure your pet gets safe outdoor exercise.",
+    "image": "https://i.postimg.cc/wTK6dCBJ/winter-dog-walk.jpg",
+    "category": "Outdoor"
+  }
+]
