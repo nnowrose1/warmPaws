@@ -18,7 +18,7 @@ export const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                loader: () => fetch('/petCare.json'),
+                loader: () => fetch('/popularServices.json'),
                 element: <Home></Home>,
                 hydrateFallbackElement: <Loader></Loader>
             },

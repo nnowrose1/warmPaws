@@ -1,0 +1,44 @@
+[
+  {
+    "tipId": 1,
+    "title": "Keep Pets Warm Indoors",
+    "description": "Ensure your pets stay cozy indoors during cold months. Keep their bedding warm and away from drafts or cold floors.",
+    "image": "https://i.postimg.cc/tRYRTdzn/pet-warm-bed.jpg",
+    "category": "Indoor Care"
+  },
+  {
+    "tipId": 2,
+    "title": "Limit Outdoor Time",
+    "description": "Avoid keeping pets outside for too long. Frostbite and hypothermia can occur quickly, especially for smaller or short-haired pets.",
+    "image": "https://i.postimg.cc/0QWjst3N/pet-outdoor-limit.jpg",
+    "category": "Outdoor Safety"
+  },
+  {
+    "tipId": 3,
+    "title": "Use Pet-Friendly Paw Balm",
+    "description": "Snow and salt can irritate pet paws. Apply a protective paw balm before walks and wipe their feet afterward to prevent cracking.",
+    "image": "https://i.postimg.cc/5ymTvSzD/paw-balm.jpg",
+    "category": "Paw Protection"
+  },
+  {
+    "tipId": 4,
+    "title": "Proper Winter Clothing",
+    "description": "Short-haired breeds benefit from sweaters or jackets. Ensure they fit well and keep the pet’s chest and back warm.",
+    "image": "https://i.postimg.cc/zvRQtMP9/pet-sweater.jpg",
+    "category": "Clothing"
+  },
+  {
+    "tipId": 5,
+    "title": "Keep Pets Hydrated",
+    "description": "Pets can get dehydrated in winter too! Make sure they always have access to fresh, unfrozen water.",
+    "image": "https://i.postimg.cc/9FHS7HkJ/pet-hydration.jpg",
+    "category": "Health"
+  },
+  {
+    "tipId": 6,
+    "title": "Regular Vet Checkups",
+    "description": "Cold weather can worsen arthritis and joint pain. Schedule a winter checkup to keep your pet’s health in top condition.",
+    "image": "https://i.postimg.cc/pdk5THvQ/vet-checkup.jpg",
+    "category": "Healthcare"
+  }
+]

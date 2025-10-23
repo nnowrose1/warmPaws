@@ -1,0 +1,38 @@
+[
+  {
+    "serviceId": 1,
+    "serviceName": "Winter Coat Fitting for Dogs",
+    "providerName": "PawCare Studio",
+    "providerEmail": "info@pawcare.com",
+    "price": 25,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Custom coat fitting and warm outfit options to keep your dog comfortable in the cold.",
+    "image": "https://i.postimg.cc/3R0n1gZr/winter-coat-dog.jpg",
+    "category": "Clothing"
+  },
+   {
+    "serviceId": 4,
+    "serviceName": "Winter Grooming & De-shedding",
+    "providerName": "FluffyTails Spa",
+    "providerEmail": "hello@fluffytails.com",
+    "price": 30,
+    "rating": 5.0,
+    "slotsAvailable": 3,
+    "description": "Professional winter grooming session including de-shedding and moisturizing shampoo for thick coats.",
+    "image": "https://i.postimg.cc/hGmTHxTP/winter-grooming.jpg",
+    "category": "Grooming"
+  },
+  {
+    "serviceId": 9,
+    "serviceName": "Winter Walking Assistance Service",
+    "providerName": "FrostySteps",
+    "providerEmail": "info@frostysteps.com",
+    "price": 28,
+    "rating": 4.7,
+    "slotsAvailable": 5,
+    "description": "Trained pet walkers equipped for cold weather to ensure your pet gets safe outdoor exercise.",
+    "image": "https://i.postimg.cc/wTK6dCBJ/winter-dog-walk.jpg",
+    "category": "Outdoor"
+  }
+]

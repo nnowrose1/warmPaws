@@ -18,7 +18,7 @@ const Register = () => {
     const name = e.target.name.value;
     const photo = e.target.photo.value;
     const terms = e.target.terms.checked;
-    console.log({ name, photo, email, password });
+    // console.log({ name, photo, email, password });
 
     if(!terms) {
         toast.error("Please accept our terms and conditions!");
@@ -176,7 +176,7 @@ const Register = () => {
                   ></path>
                 </g>
               </svg>
-              Login with Google
+              Register with Google
             </button>
           </div>
         </div>

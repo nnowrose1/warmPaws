@@ -4,6 +4,7 @@ import logo from '../assets/logo1.png'
 import { AuthContext } from '../context/AuthContext';
 import { FiLogOut } from 'react-icons/fi';
 import { toast } from 'react-toastify';
+import userimg from '../assets/user.png'
 
 const Navbar = () => {
     const {user, logOut, setUser} = use(AuthContext);
@@ -47,10 +48,19 @@ const Navbar = () => {
      {links}
     </ul>
   </div>
-  <div className="navbar-end">
-    {user ? <button onClick={handleLogout} className="btn bg-primary rounded-md text-white"><FiLogOut />Logout</button> :  <Link to='/auth/login' className="btn bg-primary rounded-md text-white">Login/Register</Link> }
-   
+  <div className="navbar-end flex gap-2 items-center">
+    
+    {/* Tooltip from daisyUI */}
+
+  <div className="md:tooltip" data-tip={user?.displayName ? (user?.displayName) : "User"}>
+    {user &&
+    <img  className='h-12 w-12 rounded-full cursor-pointer' src={user?.photoURL ? (user?.photoURL): userimg}></img> 
+    }
   </div>
+
+       
+    {user ? <button onClick={handleLogout} className="btn bg-primary rounded-md text-white"><FiLogOut />Logout</button> :  <Link to='/auth/login' className="btn bg-primary rounded-md text-white">Login/Register</Link> }
+    </div>
 </nav>
     );
 };
