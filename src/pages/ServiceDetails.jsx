@@ -37,7 +37,7 @@ const ServiceDetails = () => {
         <img
           src={image}
           alt={serviceName}
-          className="w-full h-80 object-cover"
+          className="w-full h-80 object-cover rounded-lg"
         />
         <div className="space-y-4">
           <h1 className="text-3xl font-bold mt-4  text-primary">

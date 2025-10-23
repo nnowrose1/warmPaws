@@ -8,7 +8,7 @@ const WinterTip = ({tip}) => {
             <img
               src={tip.image}
               alt={tip.title}
-              className="w-full h-56 object-cover"
+              className="w-full h-56 object-cover rounded-lg"
             />
             <div >
               <h3 className="text-xl font-semibold text-primary my-2">
