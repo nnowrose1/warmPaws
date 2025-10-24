@@ -91,7 +91,7 @@ const Login = () => {
                   to={"/auth/register"}
                   className="font-bold text-primary underline"
                 >
-                  Register
+                  Signup
                 </Link>{" "}
               </p>
             </div>

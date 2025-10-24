@@ -14,7 +14,7 @@ const WinterTips = () => {
     // console.log(tips);
     
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-4 md:pb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4 md:pb-8">
             {
            tips.map(tip => <WinterTip key={tip.tipId} tip={tip}></WinterTip>) 
             }

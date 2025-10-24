@@ -52,14 +52,14 @@ const Navbar = () => {
     
     {/* Tooltip from daisyUI */}
 
-  <div className="md:tooltip" data-tip={user?.displayName ? (user?.displayName) : "User"}>
+  <div className="tooltip" data-tip={user?.displayName ? (user?.displayName) : "User"}>
     {user &&
     <img  className='h-12 w-12 rounded-full cursor-pointer' src={user?.photoURL ? (user?.photoURL): userimg}></img> 
     }
   </div>
 
        
-    {user ? <button onClick={handleLogout} className="btn bg-primary rounded-md text-white"><FiLogOut />Logout</button> :  <Link to='/auth/login' className="btn bg-primary rounded-md text-white">Login/Register</Link> }
+    {user ? <button onClick={handleLogout} className="btn bg-primary rounded-md text-white"><FiLogOut />Logout</button> :  <Link to='/auth/login' className="btn bg-primary rounded-md text-white">Login</Link> }
     </div>
 </nav>
     );

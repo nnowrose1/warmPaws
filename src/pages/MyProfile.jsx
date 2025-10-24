@@ -6,7 +6,7 @@ const MyProfile = () => {
   const { user } = use(AuthContext);
 
   return (
-    <section className="flex justify-center items-center min-h-screen bg-orange-100">
+    <section className="flex justify-center items-center min-h-screen bg-orange-100 p-4">
       <div className="bg-white shadow-lg rounded-3xl p-8 w-full max-w-md text-center border border-gray-100">
         <div className="flex justify-center mb-5">
           <img

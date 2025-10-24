@@ -15,8 +15,8 @@ const Register = () => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    const name = e.target.name.value;
-    const photo = e.target.photo.value;
+    // const name = e.target.name.value;
+    // const photo = e.target.photo.value;
     const terms = e.target.terms.checked;
     // console.log({ name, photo, email, password });
 
@@ -50,7 +50,7 @@ const Register = () => {
       });
   };
 
-  const handleGoogleSignIn = () => {
+  const handleGoogleSignUp = () => {
     googleSignIn()
       .then((result) => {
         setUser(result.user);
@@ -65,7 +65,7 @@ const Register = () => {
     <div className="hero container mx-auto bg-orange-100 text-primary min-h-screen">
       <div className="hero-content bg-orange-100 flex-col lg:flex-row-reverse">
         <div className="text-center">
-          <h1 className="text-5xl font-bold">Please Register!</h1>
+          <h1 className="text-5xl font-bold">Please Signup!</h1>
         </div>
         <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
           <div className="card-body">
@@ -146,7 +146,7 @@ const Register = () => {
 
             {/* Google */}
             <button
-              onClick={handleGoogleSignIn}
+              onClick={handleGoogleSignUp}
               className="btn bg-white text-black border-[#e5e5e5]"
             >
               <svg
@@ -176,7 +176,7 @@ const Register = () => {
                   ></path>
                 </g>
               </svg>
-              Register with Google
+              Signup with Google
             </button>
           </div>
         </div>

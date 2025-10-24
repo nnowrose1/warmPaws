@@ -4,12 +4,16 @@ import ServiceCard from "../components/serviceCard";
 import WinterTips from "../components/WinterTips";
 import Vets from "../components/Vets";
 import Essentials from "../components/Essentials";
+import BannerSlide from "../components/BannerSlide";
 
 const Home = () => {
   const services = useLoaderData();
 
   return (
     <div className="bg-orange-100">
+        {/* Banner */}
+      <BannerSlide></BannerSlide>
+      
       {/* popular winter care services */}
       <h2 className="font-bold text-4xl text-center text-primary pt-8">
         Popular Winter Care Services
@@ -19,20 +23,21 @@ const Home = () => {
           <ServiceCard key={service.serviceId} service={service}></ServiceCard>
         ))}
       </div>
+
       {/* Winter tips */}
-      <h2 className="font-bold text-4xl text-center text-primary pb-8">
+      <h2 className="font-bold text-4xl text-center text-primary py-8">
         Winter Care Tips for Pets
       </h2>
       <WinterTips></WinterTips>
 
       {/* Pet essentials */}
-      <h2 className="font-bold text-4xl text-center text-primary pb-8">
+      <h2 className="font-bold text-4xl text-center text-primary py-8">
         Handpicked Essentials Your Pet Will Love
       </h2>
       <Essentials></Essentials>
 
       {/* Vets */}
-      <h2 className="font-bold text-4xl text-center text-primary pb-8">
+      <h2 className="font-bold text-4xl text-center text-primary py-8">
         Meet Our Expert Vets
       </h2>
       <Vets></Vets>
