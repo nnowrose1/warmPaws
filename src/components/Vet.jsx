@@ -1,9 +1,10 @@
 import { Star } from 'lucide-react';
 import React from 'react';
 
-const Vet = ({vet}) => {
+const Vet = ({vet, index}) => {
     return (
-        <div className="card bg-base-100 shadow-lg hover:shadow-xl rounded-2xl overflow-hidden p-4">
+        <div data-aos="fade-left"
+                    data-aos-delay={index * 200} className="card bg-base-100 shadow-lg hover:shadow-xl rounded-2xl overflow-hidden p-4">
       <img
         src={vet.image}
         alt={vet.name}

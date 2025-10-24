@@ -45,7 +45,7 @@ const Vets = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4 md:pb-8">
            
          { 
-            vets.map(vet => <Vet key={vet.vetId} vet={vet}></Vet>)
+            vets.map((vet, index) => <Vet key={vet.vetId} index={index} vet={vet}></Vet>)
          }   
         </div>
     );

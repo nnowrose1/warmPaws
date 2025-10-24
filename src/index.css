@@ -30,3 +30,8 @@ nav a.active{
 .mySwiper .swiper-button-prev {
   color: #fbbf24;
 }
+
+:root {
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
+}

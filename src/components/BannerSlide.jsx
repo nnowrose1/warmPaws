@@ -1,10 +1,12 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Pagination, Navigation, EffectFade } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Link } from "react-router";
+import Aos from "aos";
 
 const BannerSlide = () => {
    const slides = [
@@ -33,13 +35,16 @@ const BannerSlide = () => {
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
+         effect="fade" 
+        fadeEffect={{ crossFade: true }}
         autoplay={{
           delay: 3000,
           disableOnInteraction: false,
         }}
         pagination={{ clickable: true }}
         navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
+        modules={[Autoplay, Pagination, Navigation, EffectFade]}
+        onSlideChange={() => Aos.refresh()}
         className="mySwiper"
       >
         {slides.map((slide) => (
@@ -47,23 +52,32 @@ const BannerSlide = () => {
             <div
               className="h-[60vh] flex flex-col justify-center items-center text-center text-white object-cover bg-cover bg-no-repeat bg-center"
               style={{
-                backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${slide.image})`,
+                backgroundImage: `url(${slide.image})`,
               }}
             >
-              <h2 className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+                 <div
+                className="text-center text-white px-5"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+              <h2  className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">
                 {slide.title}
               </h2>
-              <p className="text-lg md:text-xl max-w-2xl mx-auto mb-6">
+              <p data-aos="fade-in"
+                  data-aos-delay="400" className="text-lg md:text-xl max-w-2xl mx-auto mb-6">
                 {slide.desc}
               </p>
-             <Link to={"/services"}> <button className="bg-[#FBBF24] hover:bg-[#E59E0C] text-black font-semibold px-6 py-3 rounded-full transition-all duration-300">
+             <Link to={"/services"}> <button data-aos="zoom-in"
+                  data-aos-delay="600" className="bg-[#FBBF24] hover:bg-[#E59E0C] text-black font-semibold px-6 py-3 rounded-full transition-all duration-300">
                 Explore Winter Care
               </button></Link>
+            </div>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
     </section>
+    
   );
 };
 

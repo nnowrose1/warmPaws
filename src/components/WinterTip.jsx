@@ -1,8 +1,9 @@
 import React from 'react';
 
-const WinterTip = ({tip}) => {
+const WinterTip = ({tip, index}) => {
     return (
-        <div
+        <div data-aos="fade-left"
+                    data-aos-delay={index * 100}
             className="bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-xl  p-5"
           >
             <img
