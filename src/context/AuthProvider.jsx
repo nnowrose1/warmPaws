@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { AuthContext } from './AuthContext';
-import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth';
+import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
 import { auth } from '../firebase/firebase.config';
 
 const googleProvider = new GoogleAuthProvider();
@@ -8,6 +8,7 @@ const googleProvider = new GoogleAuthProvider();
 const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
+    const emailRef = useRef();
 
     const createUser = (email, password) => {
         setLoading(true);
@@ -33,6 +34,8 @@ const AuthProvider = ({children}) => {
         return signOut(auth);
     }
 
+  
+
       // get current user info
   useEffect(() => {
     // set/mount the observer
@@ -47,14 +50,20 @@ const AuthProvider = ({children}) => {
     }
   }, [])
 
+    const profileUpdate = (profile) => {
+        return updateProfile(auth.currentUser, profile);
+    }
+
     const authInfo = {
     createUser,
+    emailRef,
     loading,
     user,
     setUser,
     logInUser,
     googleSignIn,
     resetPassword,
+     profileUpdate,
     logOut
     }
     return (

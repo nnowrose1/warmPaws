@@ -1,4 +1,4 @@
-import React, { use, useRef } from "react";
+import React, { use } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../context/AuthContext";
 import { useState } from "react";
@@ -7,11 +7,11 @@ import toast, { Toaster } from "react-hot-toast";
 
 const Login = () => {
 
-    const {logInUser, setUser, resetPassword, googleSignIn} = use(AuthContext);
+    const {logInUser, setUser, googleSignIn, emailRef} = use(AuthContext);
     const [toggleEyeIcon, setToggleEyeIcon] = useState(false);
     const location = useLocation();
     const navigate = useNavigate();
-    const emailRef = useRef();
+    
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -43,14 +43,6 @@ const Login = () => {
           });
   }
 
-  const handlePasswordReset = () => {
-    const email =emailRef.current.value;
-    resetPassword(email).then(() => toast('Please check your Email'))
-    .catch((error) => {
-        console.log(error.message);
-        
-    })
-  }
   return (
     <div className="hero container mx-auto bg-orange-100 text-primary min-h-screen">
       <div className="hero-content flex-col lg:flex-row-reverse">
@@ -86,7 +78,7 @@ const Login = () => {
                   </div>
 
                   <div>
-                    <button onClick={handlePasswordReset} type="submit" className="link link-hover">Forgot password?</button>
+                    <Link to={"/auth/forgetPassword"}><button type="submit" className="link link-hover">Forgot password?</button></Link>
                   </div>
                   <button className="btn btn-neutral mt-4 bg-primary rounded-md text-white">
                     Login

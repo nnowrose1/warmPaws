@@ -10,56 +10,70 @@ import Error from "../components/Error";
 import ServiceDetails from "../pages/ServiceDetails";
 import Loader from "../components/Loader";
 import PrivateRoutes from "./PrivateRoutes";
+import UpdateProfile from "../pages/UpdateProfile";
+import ForgetPassword from "../pages/ForgetPassword";
 
 export const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <MainLayout></MainLayout>,
-        children: [
-            {
-                index: true,
-                loader: () => fetch('/popularServices.json'),
-                element: <Home></Home>,
-                hydrateFallbackElement: <Loader></Loader>
-            },
-            {
-                path: '/services',
-                loader: () => fetch('/petCare.json'),
-                element: <Services></Services>,
-                hydrateFallbackElement: <Loader></Loader>
-            },
-            {
-             path: '/services/:id',
-             loader: () => fetch('/petCare.json'),
-             element: <PrivateRoutes>
-                <ServiceDetails></ServiceDetails>
-             </PrivateRoutes>,
-             hydrateFallbackElement: <Loader></Loader>
-            },
-            {
-                path: '/profile',
-                element: <MyProfile></MyProfile>
-            },
-
-        ],
-
-    },
-    {
-        path: '/auth',
-        element: <AuthLayout></AuthLayout>,
-        children: [
-            {
-                path: '/auth/login',
-                element: <Login></Login>
-            },
-            {
-           path: '/auth/register',
-           element: <Register></Register>
-            }
-        ]
-    },
+  {
+    path: "/",
+    element: <MainLayout></MainLayout>,
+    children: [
+      {
+        index: true,
+        loader: () => fetch("/popularServices.json"),
+        element: <Home></Home>,
+        hydrateFallbackElement: <Loader></Loader>,
+      },
+      {
+        path: "/services",
+        loader: () => fetch("/petCare.json"),
+        element: <Services></Services>,
+        hydrateFallbackElement: <Loader></Loader>,
+      },
+      {
+        path: "/services/:id",
+        loader: () => fetch("/petCare.json"),
+        element: (
+          <PrivateRoutes>
+            <ServiceDetails></ServiceDetails>
+          </PrivateRoutes>
+        ),
+        hydrateFallbackElement: <Loader></Loader>,
+      },
+      {
+        path: "/profile",
+        element: <MyProfile></MyProfile>,
+      },
+      {
+        path: "/updateProfile",
+        element: (
+          <PrivateRoutes>
+            <UpdateProfile></UpdateProfile>
+          </PrivateRoutes>
+        ),
+      },
+    ],
+  },
+  {
+    path: "/auth",
+    element: <AuthLayout></AuthLayout>,
+    children: [
+      {
+        path: "/auth/login",
+        element: <Login></Login>,
+      },
        {
-        path: '/*',
-        element: <Error></Error>
-    }
-])
+        path: "/auth/forgetPassword",
+        element: <ForgetPassword></ForgetPassword>,
+      },
+      {
+        path: "/auth/register",
+        element: <Register></Register>,
+      },
+    ],
+  },
+  {
+    path: "/*",
+    element: <Error></Error>,
+  },
+]);
