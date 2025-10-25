@@ -11,7 +11,7 @@ const ForgetPassword = () => {
   const handlePasswordReset = (e) => {
     e.preventDefault();
     //  const email =emailRef.current.value;
-    console.log(email);
+    // console.log(email);
 
     resetPassword(email)
       .then(() => {
