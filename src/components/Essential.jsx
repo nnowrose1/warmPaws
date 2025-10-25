@@ -3,7 +3,7 @@ import React from "react";
 const Essential = ({ item, index }) => {
   return (
     <div
-      data-aos="fade-left"
+      data-aos="fade-zoom-in"
       data-aos-delay={index * 100}
       className="bg-white rounded-2xl shadow-md hover:shadow-lg  overflow-hidden p-4"
     >

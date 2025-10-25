@@ -19,6 +19,7 @@ const Register = () => {
     // const photo = e.target.photo.value;
     const terms = e.target.terms.checked;
     // console.log({ name, photo, email, password });
+    setError(' ');
 
     if(!terms) {
         toast.error("Please accept our terms and conditions!");

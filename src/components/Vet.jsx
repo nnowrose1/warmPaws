@@ -3,7 +3,7 @@ import React from 'react';
 
 const Vet = ({vet, index}) => {
     return (
-        <div data-aos="fade-left"
+        <div data-aos="fade-zoom-in"
                     data-aos-delay={index * 200} className="card bg-base-100 shadow-lg hover:shadow-xl rounded-2xl overflow-hidden p-4">
       <img
         src={vet.image}

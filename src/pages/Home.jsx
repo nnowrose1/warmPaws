@@ -16,7 +16,7 @@ const Home = () => {
 
       {/* popular winter care services */}
       <h2
-        data-aos="fade-left"
+        data-aos="fade-up"
         data-aos-delay="0"
         className="font-bold text-4xl text-center text-primary pt-8 "
       >
@@ -30,7 +30,7 @@ const Home = () => {
 
       {/* Winter tips */}
       <h2
-        data-aos="fade-left"
+        data-aos="fade-up"
         data-aos-delay="0"
         className="font-bold text-4xl text-center text-primary py-8"
       >
@@ -40,7 +40,7 @@ const Home = () => {
 
       {/* Pet essentials */}
       <h2
-        data-aos="fade-left"
+        data-aos="fade-up"
         data-aos-delay="0"
         className="font-bold text-4xl text-center text-primary py-8"
       >
@@ -50,7 +50,7 @@ const Home = () => {
 
       {/* Vets */}
       <h2
-        data-aos="fade-left"
+        data-aos="fade-up"
         data-aos-delay="0"
         className="font-bold text-4xl text-center text-primary py-8"
       >

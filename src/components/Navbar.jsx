@@ -25,7 +25,7 @@ const Navbar = () => {
     </>
 
     return (
-        <nav className="navbar shadow-sm container mx-auto bg-orange-200 ">
+        <nav className="navbar shadow-sm w-full mx-auto bg-orange-200 z-50 ">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

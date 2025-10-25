@@ -13,7 +13,7 @@ const WinterTips = () => {
     }, [])
     
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4 md:pb-8">
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4 md:pb-8">
             {
            tips.map((tip, index) => <WinterTip index={index} key={tip.tipId} tip={tip}></WinterTip>) 
             }

@@ -4,7 +4,7 @@ import { Link } from "react-router";
 const ServiceCard = ({ service, index }) => {
   return (
     <div
-      data-aos="fade-left"
+      data-aos="fade-zoom-in"
       data-aos-delay={index * 100}
       className="bg-white shadow-lg rounded-2xl overflow-hidden transition-transform transform hover:-translate-y-2 hover:shadow-xl p-4"
     >

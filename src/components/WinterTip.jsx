@@ -2,7 +2,7 @@ import React from 'react';
 
 const WinterTip = ({tip, index}) => {
     return (
-        <div data-aos="fade-left"
+        <div data-aos="fade-zoom-in"
                     data-aos-delay={index * 100}
             className="bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-xl  p-5"
           >

@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="container mx-auto flex flex-col">
+    <div className="w-full mx-auto flex flex-col">
     <footer className="footer sm:footer-horizontal text-neutral-content p-8 bg-primary">
         
       <nav>
