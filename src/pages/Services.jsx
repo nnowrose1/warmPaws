@@ -6,12 +6,18 @@ const Services = () => {
   const services = useLoaderData();
   const [searchTerm, setSearchTerm] = useState("");
   const [sort, setSort] = useState("");
+  const [category, setCategory] = useState("");
 
-  // Filter services based on search input
+  // Extract unique categories from services
+  const categories = [...new Set(services.map((s) => s.category))];
+
+  // Filter services based on search input and sort and category
   const filteredServices = services
     .filter((service) =>
       service?.serviceName.toLowerCase().includes(searchTerm.toLowerCase())
     )
+    .filter((service) =>
+      category ? service.category === category : true)
     .sort((a, b) => {
       if (sort === "low-high") return a.price - b.price;
       if (sort === "high-low") return b.price - a.price;
@@ -30,8 +36,8 @@ const Services = () => {
 
       {/* Search Bar */}
 
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-4 mt-6 mb-4">
-        <div className="max-w-md mx-auto">
+      <div className="container mx-auto flex flex-col md:flex-row justify-around items-center px-4 mt-6 mb-4">
+        <div className="max-w-md">
           <input
             type="text"
             placeholder="Search services..."
@@ -39,7 +45,7 @@ const Services = () => {
             onChange={(e) => setSearchTerm(e.target.value)}
             className="w-full px-5 py-3 rounded-full border border-secondary focus:outline-none focus:ring-2 focus:ring-orange-400 bg-white shadow-sm"
           />
-        </div>
+       </div>
       
 
       {/* Sort */}
@@ -53,6 +59,21 @@ const Services = () => {
         <option value="low-high">Low → High</option>
         <option value="high-low">High → Low</option>
       </select>
+
+       {/* Category Filter */}
+        <select
+          className="p-3 border rounded-lg bg-white shadow-sm"
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+        >
+          <option value="">All Categories</option>
+          {categories.map((cat) => (
+            <option key={cat} value={cat}>
+              {cat}
+            </option>
+          ))}
+        </select>
+
       </div>
 
       <div className="container mx-auto px-4 py-10 grid gap-8 md:grid-cols-3 lg:grid-cols-4">
