@@ -5,7 +5,7 @@ const AboutUs = () => {
   return (
     <div className="container mx-auto bg-orange-50">
       {/* Hero Section */}
-      <section className="h-[60vh] container mx-auto py-16  flex flex-col md:flex-row gap-6 items-center px-6">
+      <section className="md:h-[60vh] container mx-auto py-16  flex flex-col md:flex-row gap-6 items-center px-6">
         
           {/* IMAGE SIDE */}
           <div className="flex-1 px-6 py-6 w-[60vw] h-[60vh]">
