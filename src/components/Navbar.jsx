@@ -20,12 +20,17 @@ const Navbar = () => {
     }
     const links = <>
     <li className='font-semibold text-lg text-primary'><NavLink to={'/'}>Home</NavLink></li>
+    <li className='font-semibold text-lg text-primary'><NavLink to={"/aboutUs"}>About Us</NavLink></li>
     <li className='font-semibold text-lg text-primary'><NavLink to={'/services'}>Our Services</NavLink></li>
-    <li className='font-semibold text-lg text-primary'><NavLink to={'/profile'}>My Profile</NavLink></li>
+    <li className='font-semibold text-lg text-primary'><NavLink to={'/contactUs'}>Contact Us</NavLink></li>
+    {
+      user &&  <li className='font-semibold text-lg text-primary'><NavLink to={'/profile'}>My Profile</NavLink></li>
+    }
+   
     </>
 
     return (
-        <nav className="navbar shadow-sm w-full mx-auto bg-orange-200 z-50 ">
+        <nav className="navbar shadow-sm w-full mx-auto bg-linear-to-r from-orange-50 to orange-200 z-50 ">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -40,7 +45,7 @@ const Navbar = () => {
     </div>
     <div className='flex flex-col md:flex-row items-center'>
         <img className='w-20 h-20 rounded-full ' src={logo} alt="" />
-    <a className="btn btn-ghost text-xl md:text-2xl text-primary font-bold md:font-extrabold">WarmPaws</a>
+    <a className="btn btn-ghost text-xl md:text-2xl text-primary -mt-6 md:mt-0 md:-ml-7  font-bold md:font-extrabold">WarmPaws</a>
     </div>
   </div>
   <div className="navbar-center hidden lg:flex">
@@ -59,7 +64,11 @@ const Navbar = () => {
   </div>
 
        
-    {user ? <button onClick={handleLogout} className="btn bg-primary rounded-md text-white"><FiLogOut />Logout</button> :  <Link to='/auth/login' className="btn bg-primary rounded-md text-white">Login</Link> }
+    {user ? <button onClick={handleLogout} className="btn bg-primary rounded-md text-white"><FiLogOut />Logout</button> : 
+    <div>
+    <Link to='/auth/login' className="btn bg-primary rounded-md text-white">Login</Link>
+    <Link to='/auth/register' className="btn bg-primary ms-2 rounded-md text-white">Register</Link> 
+    </div> }
     </div>
 </nav>
     );

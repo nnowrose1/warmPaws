@@ -9,7 +9,7 @@ const Error = () => {
   return (
     <>
       <Navbar></Navbar>
-      <div className="w-full text-center p-20 bg-orange-100">
+      <div className="w-full text-center p-20 bg-orange-50">
         <img className="mx-auto" src={errorIcon} alt="" />
         <h2 className="font-semibold text-5xl text-primary mt-4">
           Oops, page not found!

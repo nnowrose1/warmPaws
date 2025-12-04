@@ -5,6 +5,7 @@ import Register from '../pages/Register';
 import Navbar from '../components/Navbar';
 import { ToastContainer } from 'react-toastify';
 import Footer from '../components/Footer';
+import FooterUp from '../components/FooterUp';
 
 const AuthLayout = () => {
     return (
@@ -14,7 +15,7 @@ const AuthLayout = () => {
                 <Login></Login>
                 <Register></Register>
             </Outlet>
-            <Footer></Footer>
+            <FooterUp></FooterUp>
             <ToastContainer /> 
         </div>
     );

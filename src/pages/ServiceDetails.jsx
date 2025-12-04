@@ -32,7 +32,7 @@ const ServiceDetails = () => {
     e.target.reset();
   }
   return (
-    <div className="container mx-auto bg-orange-100 p-10">
+    <div className="container mx-auto bg-orange-50 p-10">
       <div className="max-w-4xl mx-auto bg-white shadow-xl rounded-2xl overflow-hidden p-6">
         <img
           src={image}
@@ -68,7 +68,7 @@ const ServiceDetails = () => {
               <p className="text-lg font-semibold ">Price: ${price}</p>
             </div>
           </div>
-        <div className="mx-auto bg-orange-100 shadow-md rounded-2xl p-8 w-full max-w-md">
+        <div className="mx-auto bg-orange-50 shadow-md rounded-2xl p-8 w-full max-w-md">
           <h2 className="text-2xl font-semibold text-center mb-6 text-primary">Book a Service</h2>
           <form onSubmit={handleBookService}>
             <fieldset className="fieldset">

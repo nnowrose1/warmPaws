@@ -5,7 +5,7 @@ const Essential = ({ item, index }) => {
     <div
       data-aos="fade-zoom-in"
       data-aos-delay={index * 100}
-      className="bg-white rounded-2xl shadow-md hover:shadow-lg  overflow-hidden p-4"
+      className="bg-white rounded-2xl shadow-md hover:shadow-lg  overflow-hidden p-4 transition-transform transform hover:-translate-y-2"
     >
       <img
         src={item.image}

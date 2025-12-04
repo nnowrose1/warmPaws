@@ -1,12 +1,11 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation, EffectFade } from "swiper/modules";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Link } from "react-router";
 import Aos from "aos";
+import { Link } from "react-router";
 
 const BannerSlide = () => {
   const slides = [
@@ -31,53 +30,48 @@ const BannerSlide = () => {
   ];
 
   return (
-    <section className="relative container mx-auto">
+    <section className="relative w-full">
       <Swiper
         spaceBetween={30}
-        centeredSlides={true}
-        effect="fade"
-        fadeEffect={{ crossFade: true }}
         autoplay={{
           delay: 3000,
           disableOnInteraction: false,
         }}
         pagination={{ clickable: true }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation, EffectFade]}
+        navigation
+        modules={[Autoplay, Pagination, Navigation]}
         onSlideChange={() => Aos.refresh()}
         className="mySwiper"
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
-            <div
-              className="relative h-[70vh] flex flex-col justify-center items-center text-center text-white object-fill bg-cover bg-no-repeat bg-center"
-              style={{
-                backgroundImage: `url(${slide.image})`,
-              }}
-            >
-              <div className="absolute top-0 left-0 z-0 bg-black opacity-10"></div>
+            {/* FULL FLEX LAYOUT */}
+            <div className="w-full max-h-[60vh] h-[60vh] flex flex-col md:flex-row items-center justify-between overflow-hidden bg-linear-to-r from-orange-50 to-orange-200 rounded-lg">
+              
+              {/* IMAGE SIDE */}
+              <div className="w-full md:w-1/2 h-full p-8">
+                <img
+                  src={slide.image}
+                  alt="Pet Winter Banner"
+                  className="w-full h-full rounded-2xl object-cover"
+                />
+              </div>
+
+              {/* TEXT SIDE */}
               <div
-                className="text-center text-white px-5 z-50"
+                className="w-full md:w-1/2 px-6 md:px-12 text-center md:text-left flex flex-col justify-center h-full"
                 data-aos="fade-up"
-                data-aos-delay="200"
               >
-                <h2 className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+                <h2 className="text-3xl md:text-5xl font-bold text-primary mb-4">
                   {slide.title}
                 </h2>
-                <p
-                  data-aos="fade-in"
-                  data-aos-delay="400"
-                  className="text-lg md:text-xl max-w-2xl mx-auto mb-6"
-                >
+
+                <p className="text-lg md:text-xl text-accent mb-6">
                   {slide.desc}
                 </p>
-                <Link to={"/services"}>
-                  {" "}
-                  <button
-                    data-aos="zoom-in"
-                    data-aos-delay="600"
-                    className="bg-[#FBBF24] hover:bg-[#E59E0C] text-black font-semibold px-6 py-3 rounded-full transition-all duration-300"
-                  >
+
+                <Link to="/services">
+                  <button className="bg-secondary hover:bg-amber-500 text-black font-semibold px-6 py-3 rounded-full transition-all duration-300 shadow-md">
                     Explore Winter Care
                   </button>
                 </Link>

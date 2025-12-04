@@ -5,7 +5,7 @@ import { AuthContext } from "../context/AuthContext";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
-  const { createUser, setUser, googleSignIn } = use(AuthContext);
+  const { createUser, setUser, googleSignIn, profileUpdate } = use(AuthContext);
   const [error, setError] = useState("");
   const [toggleEyeIcon, setToggleEyeIcon] = useState(false);
   const navigate = useNavigate();
@@ -15,15 +15,20 @@ const Register = () => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    // const name = e.target.name.value;
-    // const photo = e.target.photo.value;
+    const name = e.target.name.value;
+    const photo = e.target.photo.value;
     const terms = e.target.terms.checked;
     // console.log({ name, photo, email, password });
-    setError(' ');
+    setError(" ");
 
-    if(!terms) {
-        toast.error("Please accept our terms and conditions!");
-        return;
+    const profile = {
+      displayName: name,
+      photoURL: photo,
+    };
+
+    if (!terms) {
+      toast.error("Please accept our terms and conditions!");
+      return;
     }
 
     const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
@@ -43,7 +48,16 @@ const Register = () => {
         setUser(result.user);
         toast.success("Registration Successful!");
         e.target.reset();
-        navigate("/");
+        
+        profileUpdate(profile)
+          .then(() => {
+            console.log("Profile Updated!");
+            setUser(profile);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+          navigate("/");
       })
       .catch((error) => {
         console.log(error.message);
@@ -63,8 +77,8 @@ const Register = () => {
   };
 
   return (
-    <div className="hero container mx-auto bg-orange-100 text-primary min-h-screen">
-      <div className="hero-content bg-orange-100 flex-col lg:flex-row-reverse">
+    <div className="hero container mx-auto bg-orange-50 text-primary min-h-screen">
+      <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="text-center">
           <h1 className="text-5xl font-bold">Please Signup!</h1>
         </div>

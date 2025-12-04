@@ -34,5 +34,17 @@
     "description": "Trained pet walkers equipped for cold weather to ensure your pet gets safe outdoor exercise.",
     "image": "https://i.ibb.co.com/Lzk8g9Y0/pet1.jpg",
     "category": "Outdoor"
+  },
+  {
+    "serviceId": 6,
+    "serviceName": "Thermal Blanket Service for Cats",
+    "providerName": "MeowHaven Supplies",
+    "providerEmail": "service@meowhaven.com",
+    "price": 12,
+    "rating": 4.5,
+    "slotsAvailable": 10,
+    "description": "Soft, machine-washable thermal blankets perfect for keeping cats cozy and calm during cold months.",
+    "image": "https://i.ibb.co.com/Nn1T690s/pet4.jpg",
+    "category": "Comfort"
   }
 ]

@@ -44,7 +44,7 @@ const Login = () => {
   }
 
   return (
-    <div className="hero container mx-auto bg-orange-100 text-primary min-h-screen">
+    <div className="hero container mx-auto bg-orange-50 text-primary min-h-screen">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="text-center lg:text-left">
           <div className="card bg-white p-8 w-full max-w-sm shrink-0 shadow-2xl text-primary">

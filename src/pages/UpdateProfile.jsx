@@ -33,16 +33,16 @@ const UpdateProfile = () => {
     }
 
     return (
-  <div className='bg-orange-100 p-5'>
+  <div className='bg-orange-50 p-5'>
     <div className="card bg-white w-full mx-auto max-w-sm shrink-0 shadow-2xl ">
         <h1 className="text-5xl font-bold text-center text-primary mt-5">Update Your Profile!</h1>
       <div className="card-body">
         <form  onSubmit={handleUpdate}>
         <fieldset className="fieldset">
           <label className="label text-primary font-semibold">Your Name</label>
-          <input type="text" name='name' required className="input text-accent" placeholder="Name" />
+          <input type="text" name='name' defaultValue={user.displayName} required className="input text-accent" placeholder="Name" />
           <label className="label text-primary font-semibold">Photo</label>
-          <input type="text" name='photo' className="input text-accent" placeholder="PhotoURL" />
+          <input type="text" name='photo'  className="input text-accent" placeholder="PhotoURL" />
    <button className="btn bg-primary w-full text-white mt-3">Update</button> 
         </fieldset>
         </form>
